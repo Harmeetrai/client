@@ -1,6 +1,7 @@
 import React from 'react'
 import { Box, Typography, Stack } from '@pankod/refine-mui'
 import { PieChartProps } from 'interfaces/home'
+import ReactApexChart from 'react-apexcharts'
 
 const PieChart = ({ title, value, series, colors}: PieChartProps) => {
   return (
@@ -13,6 +14,18 @@ const PieChart = ({ title, value, series, colors}: PieChartProps) => {
           {value}
         </Typography>
       </Stack>
+
+      <ReactApexChart
+        options = {{
+          chart: { type: 'donut' },
+          colors,
+          legend: { show: false },
+          dataLabels: { enabled: false },
+        }}
+        series={series}
+        type="donut"
+        width="120px"
+      />
     </Box>
   )
 }
