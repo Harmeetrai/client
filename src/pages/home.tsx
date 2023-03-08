@@ -25,7 +25,7 @@ const home = () => {
         />
         <PieChart 
           title="Properties for Rent"
-          value={550}
+          value={5880}
           series={[60,40]}
           colors={['#475be8', '#e4e8ef']}
         />
